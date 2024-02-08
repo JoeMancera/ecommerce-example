@@ -8,16 +8,28 @@
     "start": "next start",
     "lint": "next lint && standard && eslint . --ext .js,.ts,.tsx",
     "format": "next lint --fix && standard --fix && eslint . --ext .js,.ts,.tsx --fix",
-    "prepare": "husky && chmod ug+x .husky/*"
+    "prepare": "husky && chmod ug+x .husky/*",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.1.4",
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
+    "@storybook/addon-essentials": "8.0.0-beta.1",
+    "@storybook/addon-interactions": "8.0.0-beta.1",
+    "@storybook/addon-links": "8.0.0-beta.1",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "8.0.0-beta.1",
+    "@storybook/nextjs": "8.0.0-beta.1",
+    "@storybook/react": "8.0.0-beta.1",
+    "@storybook/test": "8.0.0-beta.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -30,10 +42,12 @@
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-storybook": "^0.6.15",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.2",
     "postcss": "^8",
     "standard": "^17.1.0",
+    "storybook": "8.0.0-beta.1",
     "tailwindcss": "^3.3.0",
     "typescript": "^5.3.3"
   },
