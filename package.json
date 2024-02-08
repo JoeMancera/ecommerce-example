@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint && standard && eslint . --ext .js,.ts,.tsx",
-    "format": "next lint --fix && standard --fix && eslint . --ext .js,.ts,.tsx --fix"
+    "format": "next lint --fix && standard --fix && eslint . --ext .js,.ts,.tsx --fix",
+    "prepare": "husky && chmod ug+x .husky/*"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -23,10 +24,21 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.2",
     "postcss": "^8",
     "prettier": "3.2.5",
     "standard": "^17.1.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "./src/**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
   }
 }
