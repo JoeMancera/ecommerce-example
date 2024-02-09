@@ -1,22 +1,24 @@
 import clsx from 'clsx'
-
-export enum ButtonSize {
-  SMALL = 'small',
-  LARGE = 'large',
-}
+import { sizeClasses, typeClasses } from './button.classes'
+import { ButtonSize, ButtonStyleType } from './button.types'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
   size?: ButtonSize
-  primary?: boolean
+  typeStyle?: ButtonStyleType
 }
 
+const defaultButtonClass = 'flex items-center rounded-3xl font-medium transition-colors aria-disabled:cursor-not-allowed aria-disabled:opacity-50'
+
 export function Button({ children, className, ...rest }: ButtonProps) {
+  const { size = ButtonSize.NORMAL, typeStyle = ButtonStyleType.PRIMARY } = rest
   return (
     <button
       {...rest}
       className={clsx(
-        'flex h-10 items-center rounded-3xl bg-blue-500 px-4 text-sm font-medium text-white transition-colors hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:bg-blue-600 aria-disabled:cursor-not-allowed aria-disabled:opacity-50',
+        defaultButtonClass,
+        sizeClasses[size],
+        typeClasses[typeStyle],
         className
       )}
     >

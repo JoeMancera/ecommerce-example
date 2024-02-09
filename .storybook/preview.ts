@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import "../src/styles/globals.css";
+import "../src/app/globals.css";
 
 const customViewports = {
   xs: {
@@ -52,10 +52,10 @@ const preview: Preview = {
       viewports: customViewports,
     },
     backgrounds: {
-      default: 'dark',
+      default: 'purple',
       values: [
         {
-          name: 'dark', value: '#020024',
+          name: 'purple', value: '#020024',
         },
         {
           name: 'gray', value: '#787878',
