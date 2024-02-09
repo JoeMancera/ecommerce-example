@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@storybook/addon-a11y':
+    specifier: ^7.6.13
+    version: 7.6.13
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
@@ -2194,6 +2197,13 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
+  /@storybook/addon-a11y@7.6.13:
+    resolution: {integrity: sha512-6Qf+tzt1MXXHDUpSVz3P+e7j5HkilXG1VI0UDWPsN9ztjVkK72PIE9LcHSt/ojcrHAzhNlpZaWf7CblciRs2ag==}
+    dependencies:
+      '@storybook/addon-highlight': 7.6.13
+      axe-core: 4.7.0
+    dev: false
+
   /@storybook/addon-actions@8.0.0-beta.1:
     resolution: {integrity: sha512-ZNOmcBipTWNXLTwhG0x+DwdWaywGX5JrehxrGkA7LruhHC8bt7yGWwjOO3R7TZUQ4nqZOp+cEN7Em3JTt2UxHA==}
     dependencies:
@@ -2279,6 +2289,12 @@ packages:
       - react-dom
       - supports-color
     dev: true
+
+  /@storybook/addon-highlight@7.6.13:
+    resolution: {integrity: sha512-hoU0MgrTwYSLusCYpVZLwrT3cpkOOyypkve1BZEXCjWzYYMlAhAmED4VilC6nT/jnRtqLaW1gsCy1Gj5IS+I7w==}
+    dependencies:
+      '@storybook/global': 5.0.0
+    dev: false
 
   /@storybook/addon-highlight@8.0.0-beta.1:
     resolution: {integrity: sha512-aQgpBkeISqi17oToRZD/j9UaChqXYFdDxK8TIVntHVYV9JaA03GSP8IhoS2LeikawHirVgmTRLnjX3NOB0mpsg==}
@@ -2817,7 +2833,6 @@ packages:
 
   /@storybook/global@5.0.0:
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
-    dev: true
 
   /@storybook/icons@1.2.5(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-m3jnuE+zmkZy6K+cdUDzAoUuCJyl0fWCAXPCji7VZCH1TzFohyvnPqhc9JMkQpanej2TOW3wWXaplPzHghcBSg==}
@@ -4289,7 +4304,6 @@ packages:
   /axe-core@4.7.0:
     resolution: {integrity: sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==}
     engines: {node: '>=4'}
-    dev: true
 
   /axobject-query@3.2.1:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
